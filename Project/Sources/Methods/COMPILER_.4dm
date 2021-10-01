@@ -12,7 +12,7 @@ If (False:C215)
 	C_TEXT:C284(structurePictureToFile; $1)
 	
 	//_______________________________________
-	C_TEXT:C284(structurePictureToPastboard; $1)
+	C_TEXT:C284(structurePictureToPasteboard; $1)
 	
 	//_______________________________________
 	C_TEXT:C284(xmlStructureToImage; $1)

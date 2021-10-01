@@ -19,5 +19,5 @@ Else
 End if 
 
 xmlStructureToImage($xml; New object:C1471(\
-"codec"; ".pdf"; \
-"pathname"; "structure.pdf"))
+"codec"; ".png"; \
+"pathname"; "structure.png"))

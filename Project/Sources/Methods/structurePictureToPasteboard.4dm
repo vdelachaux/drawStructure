@@ -2,7 +2,7 @@
 #DECLARE($xmlStructure : Text)
 
 If (False:C215)
-	C_TEXT:C284(structurePictureToPastboard; $1)
+	C_TEXT:C284(structurePictureToPasteboard; $1)
 End if 
 
 var $xml : Text

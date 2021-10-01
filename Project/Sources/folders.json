@@ -32,7 +32,7 @@
 		"methods": [
 			"structurePictureAsPDF",
 			"structurePictureToFile",
-			"structurePictureToPastboard"
+			"structurePictureToPasteboard"
 		]
 	},
 	"trash": {}

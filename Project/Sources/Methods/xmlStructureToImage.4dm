@@ -74,7 +74,9 @@ If ($structure.table#Null:C1517)
 		
 	End if 
 	
-	$svg:=cs:C1710.svg.new()
+	$svg:=cs:C1710.svg.new()\
+		.fill("white")\
+		.fillOpacity(1)
 	
 	$defs:=DOM Create XML element:C865($svg.root; "defs")
 	
