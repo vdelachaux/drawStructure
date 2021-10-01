@@ -1,0 +1,25 @@
+{
+	"users": {
+		"designer": {
+			"alias": "Super_Utilisateur"
+		},
+		"administrator": {
+			"alias": "Administrateur"
+		}
+	},
+	"sqlSchemaGranters": {
+		"DEFAULT_SCHEMA": {
+			"readOnlyAccessGroup": "*",
+			"readWriteAccessGroup": "*",
+			"allAccessGroup": ""
+		}
+	},
+	"settings": {
+		"localGenericWebUser": "Super_Utilisateur",
+		"designAccessGroup": "*",
+		"localMobileAccessGroupRW": "*",
+		"remoteMobileAccessGroupRW": "*",
+		"remoteGenericWebUser": "Super_Utilisateur",
+		"remoteDefaultUser": ""
+	}
+}

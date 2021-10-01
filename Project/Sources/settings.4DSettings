@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><preferences stamp="11">
+	<com.4d>
+		<general>
+			<mover always_display_dialog="2"/>
+		</general>
+		<interface>
+			<user can_change_password="true" default_user="0" display_list="false" print_progress="false" splash_screen="false"/>
+			<developper allow_read_only_structure="true"/>
+			<misc formula_editor_with_full_lists="false"/>
+			<shortcuts>
+				<accept_input_form alt="false" command="false" ctrl="false" key_code="0" shift="false"/>
+				<cancel_input_form alt="false" command="false" ctrl="false" key_code="0" shift="false"/>
+				<add_subform alt="false" command="false" ctrl="false" key_code="0" shift="false"/>                                                      </shortcuts>                                                                                        </interface>
+		<web>
+			<standalone_server>
+				<configuration automatic_session_management="true" ip_address="0" listening_address="::" port_number="8080" session_mode="2">
+					<hosts>
+						<host home_page="index.html" html_root="./DossierWeb/" id="0" name="Default"/>
+					</hosts>
+				</configuration>
+				<options>
+					<web_processes timeout_for_inactives="5"/>
+					<cache cache_max_size="524288" use_4d_web_cache="false"/>
+					<web_passwords generic_web_user="1"/>
+					<filters allow_4dsync_urls="true"/>                                                                                                                                </options>
+				<log>
+					<backup daily="" hourly="" monthly="" size="0" weekly=""/>
+				</log>
+				<misc/>                                                                      </standalone_server>
+			<remote>
+				<misc/>
+				<options>
+					<web_processes timeout_for_inactives="5"/>
+					<cache cache_max_size="524288" use_4d_web_cache="false"/>
+					<web_passwords generic_web_user="1"/>
+					<filters allow_4dsync_urls="true"/>                                                                                                                                </options>
+				<configuration allow_ssl="false" automatic_session_management="true" ip_address="0" session_mode="2"/>
+				<webservices allow_requests="false"/>                                                                                                                                      </remote>                                                    </web>
+		<database>
+			<cpu_priority/>
+			<data_storage allow_data_read_only="true"/>
+			<misc standard_xpath="false"/>                                        </database>
+		<compiler>
+			<options compilation_path="3" fat_binary="true"/>
+			<method_suffix arrays="" interprocess_arrays="" interprocess_variables="" methods="" variables=""/>
+			<typage default_for_button="2"/>                                                    </compiler>
+		<server>
+			<network>
+				<options publication_name="SVG Goodies" use_legacy_network_layer="true"/>
+				<client_server use_encryption="false"/>
+			</network>
+		</server>
+		<deployment>
+			<options/>
+		</deployment>                                                                                  </com.4d>        </preferences>

@@ -1,0 +1,39 @@
+{
+	"classes": {
+		"classes": [
+			"svg",
+			"xml"
+		]
+	},
+	"dev": {
+		"tables": [
+			"All_types",
+			"cities",
+			"employees"
+		]
+	},
+	"lib": {
+		"methods": [
+			"xml_elementToObject",
+			"xmlStructureToImage"
+		]
+	},
+	"private": {
+		"groups": [
+			"classes",
+			"dev",
+			"lib"
+		],
+		"methods": [
+			"COMPILER_"
+		]
+	},
+	"shared": {
+		"methods": [
+			"structurePictureAsPDF",
+			"structurePictureToFile",
+			"structurePictureToPastboard"
+		]
+	},
+	"trash": {}
+}

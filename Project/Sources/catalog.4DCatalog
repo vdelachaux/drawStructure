@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE base SYSTEM "http://www.4d.com/dtd/2007/base.dtd" >
+<base name="drawStructure" uuid="98C6414EF2AD4AB385CDDF05AE440F94" collation_locale="fr">
+	<schema name="DEFAULT_SCHEMA"/>
+	<table name="All_types" uuid="A87262D63E7947C893335258F09E1A6D" id="1" hide_in_REST="true">
+		<field name="ID" uuid="0750EBA6713C4717AE280F66C86916D0" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="alpha" uuid="DDBF88886E834010ACDE427D3CA64C64" type="10" limiting_length="255" never_null="true" id="2"/>
+		<field name="text" uuid="10CBC0E08158421796AE917C9F2608E1" type="10" never_null="true" id="3"/>
+		<field name="date" uuid="39E02B971A914C368894B523207EC35C" type="8" never_null="true" id="4"/>
+		<field name="time" uuid="9311B82CCDAE4161B391491684D7FC39" type="9" never_null="true" id="5"/>
+		<field name="boolean" uuid="6E5AF9EC122F455BA77986C3C65BB4DC" type="1" never_null="true" id="6"/>
+		<field name="integer" uuid="006D2AD828624F8098301812A7DAAA5F" type="3" never_null="true" id="7"/>
+		<field name="longint" uuid="1C002F40DEDF4030B68FD5B31AC34A28" type="4" never_null="true" id="8"/>
+		<field name="integer64" uuid="E8C74272E7E3452B9DD141BB28E5997E" type="5" never_null="true" id="9"/>
+		<field name="real" uuid="7F4FAE114A5940C6A6D69E6DEB74A5CA" type="6" never_null="true" id="10"/>
+		<field name="blob" uuid="A74A696EC6B74B24A0E46E67CC943A2B" type="18" never_null="true" id="11"/>
+		<field name="picture" uuid="B83F6FF4F9824F89857E460276EFDB57" type="12" never_null="true" id="12"/>
+		<field name="object" uuid="77860DC5080A4D5AA1D23D8D3CD10240" type="21" blob_switch_size="2147483647" never_null="true" id="13"/>
+		<primary_key field_name="ID" field_uuid="0750EBA6713C4717AE280F66C86916D0"/>
+		<table_extra>
+			<editor_table_info fields_ordering="1" displayable_fields_count="13">
+				<color red="255" green="255" blue="255" alpha="0"/>
+				<coordinates left="570.095703125" top="149.42660522461" width="161.8955078125" height="330.21569824219"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="employees" uuid="CBAE430DA4064031A81693323D44A889" id="2">
+		<field name="surname" uuid="9DF4AB0F8CA14CE1A3900D586F77EB60" type="10" unique="true" never_null="true" id="1">
+			<field_extra multi_line="false" position="7">
+				<editor_field_info>
+					<color red="216" green="30" blue="5" alpha="255"/>
+				</editor_field_info>
+			</field_extra>
+		</field>
+		<field name="name" uuid="432A6C27DC974A09B70ADBCD9E3D9FF9" type="10" never_null="true" id="2">
+			<field_extra multi_line="false" position="5">
+				<editor_field_info>
+					<color red="255" green="255" blue="255" alpha="0"/>
+				</editor_field_info>
+			</field_extra>
+		</field>
+		<field name="date_of_birth" uuid="886D1EC479EB412EAD3E88E7145B1489" type="8" never_null="true" id="3">
+			<field_extra multi_line="false" visible="false" position="2">
+				<editor_field_info>
+					<color red="255" green="255" blue="255" alpha="0"/>
+				</editor_field_info>
+			</field_extra>
+		</field>
+		<field name="birthplace" uuid="D1DDD1E5E7874537A33CE503CEF08447" type="5" never_null="true" id="4">
+			<field_extra position="4">
+				<editor_field_info>
+					<color red="0" green="81" blue="186" alpha="255"/>
+				</editor_field_info>
+			</field_extra>
+		</field>
+		<field name="gender" uuid="D13004D1BF56486AA1B254C9E5923027" type="1" never_null="true" id="5">
+			<field_extra position="1"/>
+		</field>
+		<field name="extras" uuid="00927F6B0D8C41F9B3EAAEAEC4B515DA" type="21" blob_switch_size="2147483647" never_null="true" id="6">
+			<field_extra position="3"/>
+		</field>
+		<field name="parent" uuid="ED8001B8174F4658A150BDAD7EAB6830" type="10" limiting_length="255" never_null="true" id="7">
+			<field_extra position="6"/>
+		</field>
+		<primary_key field_name="surname" field_uuid="9DF4AB0F8CA14CE1A3900D586F77EB60"/>
+		<table_extra input_form="Entrée" output_form="Sortie">
+			<editor_table_info fields_ordering="4" displayable_fields_count="9">
+				<color red="255" green="255" blue="255" alpha="0"/>
+				<coordinates left="78.076263427734" top="32.615219116211" width="144.11402893066" height="245.22280883789"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="cities" uuid="8DA605BCF6D94DEAB53F2464EB4E1F59" id="3">
+		<field name="ID" uuid="9947BDA2703E430A9C6A8BBBFC596F77" type="5" unique="true" never_null="true" id="1"/>
+		<field name="name" uuid="128A0BFA98E342E3BED0EB5A8139979C" type="10" limiting_length="255" never_null="true" id="2">
+			<field_extra>
+				<editor_field_info>
+					<color red="0" green="81" blue="186" alpha="255"/>
+				</editor_field_info>
+			</field_extra>
+		</field>
+		<field name="state" uuid="5836FB762B6841C58511EB17636F46D0" type="10" never_null="true" id="3"/>
+		<primary_key field_name="ID" field_uuid="9947BDA2703E430A9C6A8BBBFC596F77"/>
+		<table_extra input_form="Entrée" output_form="Sortie">
+			<editor_table_info displayable_fields_count="4">
+				<color red="207" green="209" blue="165" alpha="255"/>
+				<coordinates left="360.84423828125" top="177.28356933594" width="132" height="134.33203125"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<relation uuid="E456646B5FE64A1CA7ABCBB1BDFDC7F5" name_Nto1="city" name_1toN="inhabitants" auto_load_Nto1="false" auto_load_1toN="false" foreign_key="false" state="1">
+		<related_field kind="source">
+			<field_ref uuid="D1DDD1E5E7874537A33CE503CEF08447" name="birthplace">
+				<table_ref uuid="CBAE430DA4064031A81693323D44A889" name="employees"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="9947BDA2703E430A9C6A8BBBFC596F77" name="ID">
+				<table_ref uuid="8DA605BCF6D94DEAB53F2464EB4E1F59" name="cities"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="false" smartlink="true">
+				<color red="255" green="255" blue="255" alpha="0"/>
+			</editor_relation_info>
+		</relation_extra>
+	</relation>
+	<index kind="regular" uuid="2E6AD0F9716E451E89BB4F0104C500C9" type="7">
+		<field_ref uuid="432A6C27DC974A09B70ADBCD9E3D9FF9" name="name">
+			<table_ref uuid="CBAE430DA4064031A81693323D44A889" name="employees"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="78E1DE2901214A8FA0054C0647B18D6F" type="7">
+		<field_ref uuid="0750EBA6713C4717AE280F66C86916D0" name="ID">
+			<table_ref uuid="A87262D63E7947C893335258F09E1A6D" name="All_types"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="9B0FD1ABC7DA4E9CB7EF63F7348C5C2D" type="7">
+		<field_ref uuid="9947BDA2703E430A9C6A8BBBFC596F77" name="ID">
+			<table_ref uuid="8DA605BCF6D94DEAB53F2464EB4E1F59" name="cities"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="C328B0FEEA9B42759A3DDCCD363A1905" type="7">
+		<field_ref uuid="128A0BFA98E342E3BED0EB5A8139979C" name="name">
+			<table_ref uuid="8DA605BCF6D94DEAB53F2464EB4E1F59" name="cities"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="DA13459B94CF44A4A5303457EB32466B" type="7">
+		<field_ref uuid="9DF4AB0F8CA14CE1A3900D586F77EB60" name="surname">
+			<table_ref uuid="CBAE430DA4064031A81693323D44A889" name="employees"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="F173E8240F6242719F7C7ECABB216E04" type="7">
+		<field_ref uuid="E8C74272E7E3452B9DD141BB28E5997E" name="integer64">
+			<table_ref uuid="A87262D63E7947C893335258F09E1A6D" name="All_types"/>
+		</field_ref>
+	</index>
+	<base_extra package_name="drawStructure" structure_file_name="drawStructure" data_file_path=":drawStructure.4DD" __stringCompHash="icu:68.1.0" __keywordBuildingHash="icu:68.1.0">
+		<temp_folder folder_selector="system"/>
+	</base_extra>
+</base>

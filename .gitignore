@@ -1,0 +1,6 @@
+Data
+.*
+!.gitignore
+Project/DerivedData
+Preferences
+userPreferences.*
