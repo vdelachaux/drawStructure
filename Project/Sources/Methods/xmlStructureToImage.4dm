@@ -50,12 +50,17 @@ If ($structure.table#Null:C1517)
 		$structure.types[9]:=$icon
 		READ PICTURE FILE:C678($folder.file("Field_2.png").platformPath; $icon)
 		$structure.types[10]:=$icon
+		$structure.types[14]:=$structure.types[10]  // Text stored outside the record
 		READ PICTURE FILE:C678($folder.file("Field_21.png").platformPath; $icon)
 		$structure.types[12]:=$icon
+		READ PICTURE FILE:C678($folder.file("Field_13.png").platformPath; $icon)
+		$structure.types[15]:=$icon  // Subtable
+		$structure.types[16]:=$icon  // id_added_by_converter
 		READ PICTURE FILE:C678($folder.file("Field_11.png").platformPath; $icon)
 		$structure.types[18]:=$icon
 		READ PICTURE FILE:C678($folder.file("Field_14.png").platformPath; $icon)
 		$structure.types[21]:=$icon
+		
 		
 	Else 
 		
@@ -68,9 +73,13 @@ If ($structure.table#Null:C1517)
 		$structure.types[8]:="D"
 		$structure.types[9]:="H"
 		$structure.types[10]:="T"
+		$structure.types[14]:=$structure.types[10]  // Text stored outside the record
 		$structure.types[12]:="I"
+		$structure.types[15]:=$structure.types[5]  // Subtable
+		$structure.types[16]:=$structure.types[5]  // id_added_by_converter
 		$structure.types[18]:="X"
 		$structure.types[21]:="{}"
+		
 		
 	End if 
 	
@@ -309,6 +318,8 @@ If ($structure.table#Null:C1517)
 				
 				$field.coordinates.y:=$field.coordinates.y+15
 				
+				ASSERT:C1129($field.name#"picture")
+				
 				// FIELD NAME
 				$svg.text($field.name; "structure")\
 					.position($field.coordinates.x+8; $field.coordinates.y)\
@@ -318,10 +329,19 @@ If ($structure.table#Null:C1517)
 					.stroke($field.color)
 				
 				// FIELD TYPE
-				$svg.text(Choose:C955($field.limiting_length#Null:C1517; "A"; $structure.types[Num:C11($field.type)]); "structure")\
-					.position($field.coordinates.x+$field.coordinates.width-15; $field.coordinates.y)\
-					.alignment(Align center:K42:3)\
-					.fontSize(10)
+				If (Bool:C1537($options.withIcon))
+					
+					$svg.image($structure.types[Num:C11($field.type)]; "structure")\
+						.position($field.coordinates.x+$field.coordinates.width-20; $field.coordinates.y-13)
+					
+				Else 
+					
+					$svg.text(Choose:C955($field.limiting_length#Null:C1517; "A"; $structure.types[Num:C11($field.type)]); "structure")\
+						.position($field.coordinates.x+$field.coordinates.width-15; $field.coordinates.y)\
+						.alignment(Align center:K42:3)\
+						.fontSize(10)
+					
+				End if 
 				
 				$table.top:=$field.coordinates.y+5
 				
@@ -462,18 +482,25 @@ If ($structure.table#Null:C1517)
 					"stroke-opacity"; "0.8"))
 				
 				// RELATION NAMES
-				$svg.text($relation.name_Nto1; "root")\
-					.position($x1+8; $y1-5)\
-					.alignment(Align left:K42:2)\
-					.fontSize(10)\
-					.fill($relation.color)
+				If (Position:C15("added_by_converter"; $relation.name_Nto1)=0)
+					
+					$svg.text($relation.name_Nto1; "root")\
+						.position($x1+8; $y1-5)\
+						.alignment(Align left:K42:2)\
+						.fontSize(10)\
+						.fill($relation.color)
+					
+				End if 
 				
-				$svg.text($relation.name_1toN; "root")\
-					.position($x2-8; $y2+15)\
-					.alignment(Align right:K42:4)\
-					.fontSize(10)\
-					.fill($relation.color)
-				
+				If (Position:C15("added_by_converter"; $relation.name_1toN)=0)
+					
+					$svg.text($relation.name_1toN; "root")\
+						.position($x2-8; $y2+15)\
+						.alignment(Align right:K42:4)\
+						.fontSize(10)\
+						.fill($relation.color)
+					
+				End if 
 			End if 
 		End for each 
 	End if 
@@ -481,6 +508,8 @@ End if
 
 $svg.width($maxWidth+10; "root")
 $svg.height($maxHeight+10; "root")
+
+$svg.preview(True:C214)
 
 $image:=$svg.picture()
 

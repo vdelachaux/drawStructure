@@ -19,5 +19,5 @@ Else
 	
 End if 
 
-$image:=xmlStructureToImage($xml)
+$image:=xmlStructureToImage($xml; New object:C1471("withIcon"; True:C214))
 SET PICTURE TO PASTEBOARD:C521($image)
