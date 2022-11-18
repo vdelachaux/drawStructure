@@ -7,9 +7,12 @@
 	},
 	"dev": {
 		"tables": [
+			"Acts",
 			"All_types",
+			"Ambulatory",
 			"cities",
-			"employees"
+			"employees",
+			"extras"
 		]
 	},
 	"lib": {

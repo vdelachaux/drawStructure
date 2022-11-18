@@ -318,8 +318,6 @@ If ($structure.table#Null:C1517)
 				
 				$field.coordinates.y:=$field.coordinates.y+15
 				
-				ASSERT:C1129($field.name#"picture")
-				
 				// FIELD NAME
 				$svg.text($field.name; "structure")\
 					.position($field.coordinates.x+8; $field.coordinates.y)\
@@ -509,7 +507,7 @@ End if
 $svg.width($maxWidth+10; "root")
 $svg.height($maxHeight+10; "root")
 
-$svg.preview(True:C214)
+//$svg.preview(True)
 
 $image:=$svg.picture()
 
